@@ -1,0 +1,24 @@
+{
+  "name": "todo_cartel",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroHTadinoM/todocartel.git"
+  },
+  "keywords": [
+    "Website",
+    "Gulp",
+    "Flexbox"
+  ],
+  "author": "Alejandro H Tadino M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlejandroHTadinoM/todocartel/issues"
+  },
+  "homepage": "https://github.com/AlejandroHTadinoM/todocartel#readme"
+}
