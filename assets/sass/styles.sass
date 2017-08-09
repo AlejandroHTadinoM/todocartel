@@ -1,0 +1,49 @@
+@import "grid"
+
+$dark-grey: #20292F
+$light-grey: #415566
+$white: #FAFAFA
+$light: #E0E9E6
+$yellow: #F6C502
+$pink: #CA005D
+$fucsia: #F700F6
+$blue: #12A2F5
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background: $white
+
+.spacer
+	width: 100%
+	height: 100vh
+
+header
+	width: 100%
+	background: $blue
+
+	.header-wrap
+		width: 100%
+
+	.rounded
+		position: relative
+		width: 100%
+		height: 50vh
+		z-index: 2
+
+		&:after
+			width: 100%
+			height: 100%
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: $blue
+			border-radius: 100%
+			box-shadow: 0 12px 6px rgba(0, 0, 0, .2)
+			transform: translateY(50%)

@@ -20,5 +20,23 @@
   "bugs": {
     "url": "https://github.com/AlejandroHTadinoM/todocartel/issues"
   },
-  "homepage": "https://github.com/AlejandroHTadinoM/todocartel#readme"
+  "homepage": "https://github.com/AlejandroHTadinoM/todocartel#readme",
+  "devDependencies": {
+	"autoprefixer": "^7.1.2",
+	"browser-sync": "^2.18.12",
+	"gulp": "^3.9.1",
+	"gulp-clean": "^0.3.2",
+	"gulp-clean-css": "^3.7.0",
+	"gulp-concat": "^2.6.1",
+	"gulp-copy": "^1.0.0",
+	"gulp-imagemin": "^3.3.0",
+	"gulp-plumber": "^1.1.0",
+	"gulp-postcss": "^7.0.0",
+	"gulp-pug": "^3.3.0",
+	"gulp-purifycss": "^0.2.0",
+	"gulp-rename": "^1.2.2",
+	"gulp-sass": "^3.1.0",
+	"gulp-uglify": "^3.0.0",
+	"gulp-zip": "^4.0.0"
+  }
 }
