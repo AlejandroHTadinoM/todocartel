@@ -1,13 +1,20 @@
 @import "grid"
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,400,500,700|Halant:300')
 
-$dark-grey: #20292F
-$light-grey: #415566
+$dark-g: #20292F
+$light-g: #415566
 $white: #FAFAFA
 $light: #E0E9E6
 $yellow: #F6C502
-$pink: #CA005D
+$red: #CA005D
 $fucsia: #F700F6
 $blue: #12A2F5
+
+@keyframes Bounce
+	from
+		transform: translateY(-12.5%)
+	to
+		transform: translateY(12.5%)
 
 *
 	margin: 0
@@ -15,10 +22,49 @@ $blue: #12A2F5
 
 body
 	background: $white
+	color: $dark-g
+	font-family: 'Dosis', sans-serif
 
 .spacer
 	width: 100%
 	height: 100vh
+
+.btn
+	text-decoration: none
+	text-transform: capitalize
+	font-weight: 300
+	padding: 1rem 2rem
+	background-color: $white
+	color: $blue
+	border-radius: .2em
+	margin-right: .5em
+	margin-top: .8em
+	display: inline-block
+	box-shadow: 0 0 32px 32px rgba(255, 255, 255, 0)
+	transition: all .2s ease
+
+	&:hover
+		box-shadow: 0 0 8px rgba(255, 255, 255, .9)
+
+	&:last-child
+		margin-right: 0
+
+.drop
+	content: ''
+	width: 64px
+	height: 128px
+	background: linear-gradient($blue, $red)
+	position: absolute
+	z-index: 2
+	
+	&:after
+		content: ''
+		display: block
+		width: 64px
+		height: 64px
+		border-radius: 100%
+		background: $red
+		transform: translateY(150%)	
 
 header
 	width: 100%
@@ -26,11 +72,18 @@ header
 
 	.header-wrap
 		width: 100%
+		text-align: center
+
+	.page-lead
+		animation: Bounce
+		animation-duration: 1s
+		animation-iteration-count: infinite
+		animation-direction: alternate
 
 	.rounded
 		position: relative
 		width: 100%
-		height: 50vh
+		height: 25vh
 		z-index: 2
 
 		&:after
