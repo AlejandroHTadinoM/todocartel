@@ -61,6 +61,9 @@ body
 	text-align: center
 	margin: 3em auto
 
+#drop-g
+	display: none
+
 .drop
 	content: ''
 	width: 64px
@@ -143,9 +146,94 @@ header
 
 .section-about
 	color: $light-g
+	margin-top: 12.5%
 
 	p
 		font-size: 1.4em
+
+/*==================== Section Contact ====================*/
+.section-contact
+    min-height: 70vh
+    
+    .input
+        position: relative
+        margin-bottom: 2rem
+
+    .bar
+        position: relative
+        width: 100%
+        display: block
+
+        &:before, &:after
+            content: ''
+            height: 2px
+            width: 0
+            bottom: 1px
+            position: absolute
+            background: $red
+            transition: all .2s ease
+
+        &:before
+            left: 50%
+
+        &:after
+            right: 50%
+
+    .highlight
+        position: absolute
+        height: 60%
+        width: 100%
+        top: 25%
+        left: 0
+        pointer-events: none
+        opacity: .5
+
+    label
+        color: #999
+        font-size: 18px
+        font-weight: normal
+        position: absolute
+        pointer-events: none
+        left: 5px
+        top: 10px
+        transition: all .2s ease
+
+    input[type=text],
+    input[type=email],
+    textarea
+        display: block
+        width: 100%
+        border: none
+        padding: .5em 0
+        border-bottom: 1px solid $light-g
+
+        &:focus
+            outline: none
+
+            ~ label
+                top: -20px
+                font-size: 14px
+                color: $red
+
+            ~ .bar
+                &:before, &:after
+                    width: 50%
+
+            ~ .highlight
+                animation: inputHighlighter .3s ease
+
+    textarea
+        resize: none
+        height: 11.6em
+
+    input[type=reset],
+    input[type=submit]
+        width: 80%
+        margin: 1rem auto
+        border: none
+        border-radius: 4px
+        padding: .5em
+        color: $white
 
 .footer
 
