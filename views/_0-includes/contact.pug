@@ -5,23 +5,23 @@ section.section-contact
             form(action="process.php", id="formulario", method="POST").row
                 .col-xs-12.col-sm-4.col-md-4.col-lg-4
                     .input
-                        input(type="text", required, name="nombre")
+                        input(type="text", required, name="nombre", id="name")
                         span.bar
                         span.highlight
                         label(for="nombre") Nombre
                     .input
-                        input(type="text", required, name="asunto")
+                        input(type="text", required, name="asunto", id="subject")
                         span.bar
                         span.highlight
                         label(for="email") Asunto
                     .input
-                        input(type="email", required, name="email")
+                        input(type="email", required, name="email", id="email")
                         span.bar
                         span.highlight
                         label(for="email") E-mail
                 .col-xs-12.col-sm-6.col-md-6.col-lg-6
                     .input
-                        textarea(name="mensaje",  required)
+                        textarea(name="mensaje",  required, id="messaje")
                         span.bar
                         span.highlight
                         label(for="email") Mensaje

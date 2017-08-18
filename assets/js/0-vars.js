@@ -3,4 +3,6 @@ var
 	drop = $('.drop'),
 
 	lastW,
-	lastH;
+	lastH,
+
+	inputT = $('input');

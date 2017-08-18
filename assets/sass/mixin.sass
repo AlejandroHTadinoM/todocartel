@@ -1,0 +1,103 @@
+$dark-g: #20292F
+$light-g: #415566
+$white: #FAFAFA
+$light: #E0E9E6
+$yellow: #F6C502
+$red: #CA005D
+$fucsia: #F700F6
+$blue: #12A2F5
+
+@keyframes Bounce
+	from
+		transform: translateY(-100%)
+		opacity: .2
+	to
+		transform: translateY(0%)
+		opacity: 1
+
+*
+	margin: 0
+	padding: 0
+
+img
+	max-width: 100%
+
+body
+	background: $white
+	color: $dark-g
+	font-family: 'Dosis', sans-serif
+
+.spacer
+	width: 100%
+	height: 100vh
+
+.btn
+	text-decoration: none
+	text-transform: capitalize
+	font-weight: 300
+	padding: 1rem 2rem
+	background-color: $white
+	color: $blue
+	border-radius: .2em
+	margin-right: .5em
+	margin-top: .8em
+	display: inline-block
+	box-shadow: 0 0 32px 32px rgba(255, 255, 255, 0)
+	transition: all .2s ease
+
+	&:hover
+		box-shadow: 0 0 8px rgba(255, 255, 255, .9)
+
+	&:last-child
+		margin-right: 0
+
+.sub-title
+	text-transform: uppercase
+	font-weight: 700
+	font-size: 2em
+	text-align: center
+	margin: 3em auto
+
+#drop-g
+	display: none
+
+.drop
+	content: ''
+	width: 64px
+	height: 64px
+	background: $blue
+	position: absolute
+	z-index: 1
+	box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.6)
+	
+	&:after
+		content: ''
+		display: block
+		width: 64px
+		height: 64px
+		border-radius: 100%
+		background: linear-gradient($blue 45%, darken($blue, 15))
+		transform: translateY(50%)
+
+@for $i from 0 to 5
+	$h: (#{64 / $i})
+	$w: (#{$i * (64 + 2)})
+	.drop-#{$i}
+		top: calc(50% - #{$h}px)
+		right: calc(2.5% + #{$w}px)
+
+section
+	overflow: hidden
+	position: relative
+
+.skew
+	content: ''
+	width: 150%
+	height: 25vh
+	position: absolute
+	top: -25.5%
+	left: -25%
+	background: $light
+	z-index: -1
+	transform-origin: 50% 50%
+	transform: rotate(3deg)
