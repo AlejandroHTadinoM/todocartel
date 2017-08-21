@@ -1,12 +1,12 @@
-function dropPos (o) {
-	o = $(this);
-	var dropW = o.width(),
-		dropH = o.height();
+// function dropPos (o) {
+// 	o = $(this);
+// 	var dropW = o.width(),
+// 		dropH = o.height();
 
-	o.css({
-		"top" : (dropH - (dropH / .1)) + "%"
-	});
+// 	o.css({
+// 		"top" : (dropH - (dropH / .1)) + "%"
+// 	});
 
-	lastW = dropW;
-	lastH = dropH;
-}
+// 	lastW = dropW;
+// 	lastH = dropH;
+// }

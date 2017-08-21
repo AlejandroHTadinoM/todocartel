@@ -3,7 +3,7 @@ section.section-contact
             h1.sub-title contactos
             
             form(action="process.php", id="formulario", method="POST").row
-                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6.col-sm-offset-3.col-md-offset-3.col-lg-offset-3
                     .input
                         input(type="text", required, name="nombre", id="name")
                         span.bar
@@ -19,12 +19,14 @@ section.section-contact
                         span.bar
                         span.highlight
                         label(for="email") E-mail
-                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6.col-sm-offset-3.col-md-offset-3.col-lg-offset-3
                     .input
                         textarea(name="mensaje",  required, id="messaje")
                         span.bar
                         span.highlight
                         label(for="email") Mensaje
-                .col-xs-12.col-sm-2.col-md-2.col-lg-2
-                    input(type="reset", class="reset", value="Reset").contact-btn
-                    input(type="submit", class="enviar", value="Enviar").contact-btn
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .row
+                        .col-xs-6.col-sm-4.col.md-4.col-lg-4.col-sm-offset-3.col-md-offset-3.col-lg-offset-3
+                            input(type="reset", class="reset", value="Reset").contact-btn
+                            input(type="submit", class="send", value="Enviar").contact-btn

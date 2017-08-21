@@ -5,4 +5,7 @@ var
 	lastW,
 	lastH,
 
-	inputT = $('input');
+	formGroup = $('#formulario'),
+	inputTarget = formGroup.find('input'),
+
+	serviceGroup = $('.service');

@@ -6,11 +6,12 @@ $yellow: #F6C502
 $red: #CA005D
 $fucsia: #F700F6
 $blue: #12A2F5
+$green: #4DB6AC
 
 @keyframes Bounce
 	from
-		transform: translateY(-100%)
-		opacity: .2
+		transform: translateY(-200%)
+		opacity: 0
 	to
 		transform: translateY(0%)
 		opacity: 1
@@ -101,3 +102,10 @@ section
 	z-index: -1
 	transform-origin: 50% 50%
 	transform: rotate(3deg)
+
+@keyframes inputHighlighter
+	from
+		background: $red
+	to
+		width: 0
+		background: transparent

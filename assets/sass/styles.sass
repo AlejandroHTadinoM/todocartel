@@ -2,13 +2,33 @@
 @import "mixin"
 @import url('https://fonts.googleapis.com/css?family=Dosis:200,400,500,700|Halant:300')
 
+.outer-wrap
+	position: relative
+	z-index: 2
+	margin-bottom: 50vh
+	background: $white
+	padding-bottom: 12.5%
+
 header
 	width: 100%
-	background: $blue
+	background: linear-gradient(lighten($blue, 30%), $dark-g), url("../img/bgPat.png")
+		size: cover
+		position: center
+		blend-mode: overlay
+		attachment: fixed
+	position: relative
+	min-height: 100vh
 
 	.header-wrap
 		width: 100%
 		text-align: center
+		color: $dark-g
+
+		.brand-large
+			font-size: 6em
+
+		.page-blurp
+			font-size: 2em
 
 	.page-lead
 		animation: Bounce
@@ -16,9 +36,13 @@ header
 		animation-iteration-count: once
 		animation-delay: 1s
 		animation-timing-function: cubic-bezier(0.98, 0, 0.34, 1.32)
+		margin-top: 12.5%
 
 	.rounded
-		position: relative
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
 		width: 100%
 		height: 25vh
 		z-index: 2
@@ -33,18 +57,29 @@ header
 			left: 0
 			right: 0
 			bottom: 0
-			background-color: $blue
+			background: linear-gradient(rgba($blue, .6) 20%, rgba($blue, 1))
 			border-radius: 100%
 			transform: translateY(50%)
+			box-shadow: 0 12px 32px rgba(0, 0, 0, .6)
 
 /*==================== Section Service ====================*/
 .section-service
 	background: $light
-	padding-top: 20%
+	padding-top: 12.5%
 	padding-bottom: 4rem
 
 	.service
 		padding-top: 4em
+		transform: translateX(-100%)
+		transition: all 1s ease-in-out
+		opacity: 0
+
+		.service-title
+			margin-top: 50%
+
+	.viewport
+		transform: translateX(0%)
+		opacity: 1
 
 /*==================== Section About ====================*/
 .section-about
@@ -55,91 +90,113 @@ header
 
 /*==================== Section Contact ====================*/
 .section-contact
-    min-height: 70vh
-    
-    .input
-        position: relative
-        margin-bottom: 2rem
+	min-height: 70vh
+	
+	.input
+		position: relative
+		margin-bottom: 2rem
 
-    .bar
-        position: relative
-        width: 100%
-        display: block
+	.bar
+		position: relative
+		width: 100%
+		display: block
 
-        &:before, &:after
-            content: ''
-            height: 2px
-            width: 0
-            bottom: 1px
-            position: absolute
-            background: $red
-            transition: all .2s ease
+		&:before, &:after
+			content: ''
+			height: 2px
+			width: 0
+			bottom: 1px
+			position: absolute
+			background: $red
+			transition: all .2s ease
 
-        &:before
-            left: 50%
+		&:before
+			left: 50%
 
-        &:after
-            right: 50%
+		&:after
+			right: 50%
 
-    .highlight
-        position: absolute
-        height: 60%
-        width: 100%
-        top: 25%
-        left: 0
-        pointer-events: none
-        opacity: .5
+	.highlight
+		position: absolute
+		height: 60%
+		width: 100%
+		top: 25%
+		left: 0
+		pointer-events: none
+		opacity: .5
 
-    label
-        color: #999
-        font-size: 18px
-        font-weight: normal
-        position: absolute
-        pointer-events: none
-        left: 5px
-        top: 10px
-        transition: all .2s ease
+	label
+		color: #999
+		font-size: 18px
+		font-weight: normal
+		position: absolute
+		pointer-events: none
+		left: 5px
+		top: 5px
+		transition: all .2s ease
 
-    input[type=text],
-    input[type=email],
-    textarea
-        display: block
-        width: 100%
-        border: none
-        padding: .5em 0
-        border-bottom: 1px solid $light-g
+	input[type=text],
+	input[type=email],
+	textarea
+		display: block
+		width: 100%
+		border: none
+		padding: .5em 0
+		border-bottom: 1px solid lighten($dark-g, 50%)
 
-        &:focus
-            outline: none
+		&:focus
+			outline: none
 
-            ~ label
-                top: -20px
-                font-size: 14px
-                color: $red
+			~ label
+				top: -20px
+				font-size: 14px
+				color: $red
 
-            ~ .bar
-                &:before, &:after
-                    width: 50%
+			~ .bar
+				&:before, &:after
+					width: 50%
 
-            ~ .highlight
-                animation: inputHighlighter .3s ease
+			~ .highlight
+				animation: inputHighlighter .3s ease
 
-    textarea
-        resize: none
-        height: 11.6em
+	textarea
+		resize: none
+		height: 11.6em
 
-    input[type=reset],
-    input[type=submit]
-        width: 80%
-        margin: 1rem auto
-        border: none
-        border-radius: 4px
-        padding: .5em
-        color: $white
+	input[type=reset],
+	input[type=submit]
+		width: auto
+		border: none
+		padding: 1rem 2rem
+		margin-right: 1em
+		border-radius: 4px
+		color: $white
+		display: inline-block
+
+	.send
+		background: $green
+
+	.reset
+		background: $yellow
+
+		&:last-child
+			margin-right: 0
+
+	.text-light
+		~ label
+			color: #CCC
+			left: 80%
 
 /*==================== Section Footer ====================*/
 .footer
 	padding: 2rem 0
+	position: fixed
+	bottom: 0
+	background: $dark-g
+	width: 100%
+	color: $white
+	height: 50vh
+	box-sizing: border-box
 	
 	h4
 		text-transform: uppercase
