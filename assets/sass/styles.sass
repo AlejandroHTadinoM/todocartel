@@ -5,16 +5,16 @@
 .outer-wrap
 	position: relative
 	z-index: 2
-	margin-bottom: 50vh
+	margin-bottom: 25vh
 	background: $white
 	padding-bottom: 12.5%
 
 header
 	width: 100%
-	background: linear-gradient(lighten($blue, 30%), $dark-g), url("../img/bgPat.png")
+	background: linear-gradient(darken($yellow, 30%), $dark-g), url("../img/bgPat.png")
 		size: cover
 		position: center
-		blend-mode: overlay
+		blend-mode: color
 		attachment: fixed
 	position: relative
 	min-height: 100vh
@@ -64,8 +64,7 @@ header
 
 /*==================== Section Service ====================*/
 .section-service
-	background: $light
-	padding-top: 12.5%
+	background: lighten($light, 10%)
 	padding-bottom: 4rem
 
 	.service
@@ -73,6 +72,9 @@ header
 		transform: translateX(-100%)
 		transition: all 1s ease-in-out
 		opacity: 0
+
+		.service-img
+			box-shadow: 0 4px 12px rgba(0, 0, 0, .4)
 
 		.service-title
 			margin-top: 50%
@@ -107,7 +109,7 @@ header
 			width: 0
 			bottom: 1px
 			position: absolute
-			background: $red
+			background: $blue
 			transition: all .2s ease
 
 		&:before
@@ -174,7 +176,7 @@ header
 		display: inline-block
 
 	.send
-		background: $green
+		background: $blue
 
 	.reset
 		background: $yellow
@@ -189,15 +191,23 @@ header
 
 /*==================== Section Footer ====================*/
 .footer
-	padding: 2rem 0
+	padding: 5% 0
 	position: fixed
 	bottom: 0
 	background: $dark-g
 	width: 100%
 	color: $white
-	height: 50vh
+	min-height: 25vh
 	box-sizing: border-box
 	
 	h4
 		text-transform: uppercase
 		font-size: 1.6em
+
+	a
+		text-decoration: none
+		text-transform: capitalize
+		color: $white
+		display: inline-block
+		width: 60%
+		margin: .5em auto
