@@ -8,4 +8,9 @@ var
 	formGroup = $('#formulario'),
 	inputTarget = formGroup.find('input'),
 
-	serviceGroup = $('.service');
+	serviceSection = $('.section-service'),
+	serviceGroup = serviceSection.find('.service'),
+	
+	sectionAbout = $('.section-about'),
+	aboutWrap = sectionAbout.find('.about-wrap'),
+	aboutSub = aboutWrap.find('.about-sub');

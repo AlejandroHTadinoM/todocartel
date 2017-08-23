@@ -11,12 +11,13 @@
 
 header
 	width: 100%
-	background: linear-gradient(darken($yellow, 30%), $dark-g), url("../img/bgPat.png")
+	background: linear-gradient(darken($yellow, 30%), $dark-g), url("../img/bg.jpg")
 		size: cover
 		position: center
 		blend-mode: color
 		attachment: fixed
 	position: relative
+	overflow: hidden
 	min-height: 100vh
 
 	.header-wrap
@@ -64,14 +65,16 @@ header
 
 /*==================== Section Service ====================*/
 .section-service
-	background: lighten($light, 10%)
-	padding-bottom: 4rem
+	background: $light
 
 	.service
 		padding-top: 4em
 		transform: translateX(-100%)
 		transition: all 1s ease-in-out
 		opacity: 0
+
+		&:nth-child(3)
+			text-align: right
 
 		.service-img
 			box-shadow: 0 4px 12px rgba(0, 0, 0, .4)
@@ -85,10 +88,51 @@ header
 
 /*==================== Section About ====================*/
 .section-about
-	color: $light-g
+	color: $light
+	background: linear-gradient(rgba($dark-g, .2), rgba($dark-g, .9)), url("../img/bgPat.png")
+		position: center bottom
+		repeat: no-repeat
+		blend-mode: miltiply
+
+	.about-sub
+		text-align: center
+		text-transform: capitalize
+		position: relative
+		margin: .5em auto
+
+		&:after,
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			margin: 0 auto
+			text-align: center
+			bottom: 0
+			width: 0%
+			height: 1px
+			background-color: $blue
+			transition: all .4s ease-in-out
+
+		&:after
+			left: 50%
+
+		&:before
+			right: 50%
+
+	.pseudo-width
+		&:after,
+		&:before
+			width: 6.25%
+
+	.about-wrap
+		position: relative
+		right: -200%
+		opacity: .5
 
 	p
 		font-size: 1.4em
+		font-weight: 300
+		text-align: center
 
 /*==================== Section Contact ====================*/
 .section-contact
