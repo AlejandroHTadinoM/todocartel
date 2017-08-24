@@ -24,6 +24,9 @@ $green: #4DB6AC
 		width: 0
 		background: transparent
 
+@mixin backgroundGradient($c)
+	background: linear-gradient(135deg, $c, darken($c, 15%))
+
 //========== Resets ==========//
 *
 	margin: 0
@@ -45,19 +48,20 @@ section
 .btn
 	text-decoration: none
 	text-transform: capitalize
-	font-weight: 300
+	font-weight: 500
 	padding: 1rem 2rem
-	background-color: $white
-	color: $dark-g
+	color: $light
 	border-radius: .2em
 	margin-right: .5em
 	margin-top: .8em
 	display: inline-block
-	box-shadow: 0 0 32px 32px rgba(255, 255, 255, 0)
+	box-shadow: 0 0 8px 16px rgba(255, 255, 255, 0)
 	transition: all .2s ease
 
+	@include backgroundGradient(#f44336)
+
 	&:hover
-		box-shadow: 0 0 8px rgba(255, 255, 255, .9)
+		box-shadow: 0 0 1px rgba(#f44336, .9)
 
 	&:last-child
 		margin-right: 0
@@ -110,7 +114,7 @@ section
 	width: 150%
 	height: 25vh
 	position: absolute
-	top: -25.5%
+	top: -20%
 	left: -25%
 	background: $light
 	z-index: 1
@@ -130,3 +134,17 @@ section
 	transform-origin: 50% 50%
 	transform: rotate(-3deg)
 	box-shadow: 0 0 32px 8px rgba(0, 0, 0, .4)
+
+.grid
+	width: 100%
+	position: relative
+
+.grid-item
+	width: 10%
+	cursor: pointer
+	
+	img
+		width: 100%
+
+.sizer
+	width: 60%

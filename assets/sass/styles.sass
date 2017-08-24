@@ -14,7 +14,7 @@ header
 	background: linear-gradient(darken($yellow, 30%), $dark-g), url("../img/bg.jpg")
 		size: cover
 		position: center
-		blend-mode: color
+		blend-mode: color-dodge
 		attachment: fixed
 	position: relative
 	overflow: hidden
@@ -68,7 +68,7 @@ header
 	background: $light
 
 	.service
-		padding-top: 4em
+		margin-top: 12.5%
 		transform: translateX(-100%)
 		transition: all 1s ease-in-out
 		opacity: 0
@@ -77,7 +77,7 @@ header
 			text-align: right
 
 		.service-img
-			box-shadow: 0 4px 12px rgba(0, 0, 0, .4)
+			box-shadow: 0 4px 20px rgba(0, 0, 0, .3)
 
 		.service-title
 			margin-top: 50%
@@ -89,10 +89,10 @@ header
 /*==================== Section About ====================*/
 .section-about
 	color: $light
-	background: linear-gradient(rgba($dark-g, .2), rgba($dark-g, .9)), url("../img/bgPat.png")
-		position: center bottom
+	background: linear-gradient(rgba($dark-g, 0), rgba($dark-g, 1)), url("../img/bgPat.png")
+		position: center top
 		repeat: no-repeat
-		blend-mode: miltiply
+		blend-mode: multiply
 
 	.about-sub
 		text-align: center

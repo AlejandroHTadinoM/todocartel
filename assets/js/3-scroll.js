@@ -17,7 +17,7 @@ $(window).scroll(function () {
 	var wScroll = $(this).scrollTop();
 	//console.log("Scroll: " + wScroll + " Section About pos: " + sectionAboutPos);
 	
-	if ((wScroll >= (serviceOffset - windowH))) {
+	if (wScroll >= (serviceOffset - windowH / 2)) {
 
 		serviceGroup.each(function (i) {
 
@@ -25,7 +25,7 @@ $(window).scroll(function () {
 
 				serviceGroup.eq(i).addClass('viewport');
 
-			}, 150 * (i + 1));
+			}, 400 * (i + 1));
 		});
 	}
 
