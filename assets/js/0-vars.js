@@ -5,6 +5,9 @@ var
 	lastW,
 	lastH,
 
+	headerWrap = $('header'),
+	pageLead = headerWrap.find('.page-lead'),
+
 	formGroup = $('#formulario'),
 	inputTarget = formGroup.find('input'),
 
