@@ -65,7 +65,7 @@ header
 
 /*==================== Section Service ====================*/
 .section-service
-	background: $light
+	background: $yellow-l
 
 	.service
 		margin-top: 12.5%
@@ -93,6 +93,7 @@ header
 		position: center top
 		repeat: no-repeat
 		blend-mode: multiply
+		size: cover
 
 	.about-sub
 		text-align: center
@@ -255,3 +256,34 @@ header
 		display: inline-block
 		width: 60%
 		margin: .5em auto
+
+/*==================== Media Queries ====================*/
+@media screen and (max-width: 48em)
+
+	img
+		max-width: 90%
+		margin: 0 auto
+
+	header
+		.header-wrap
+			.page-blurp
+				width: 90%
+				margin: 0 auto
+
+	.section-service
+		.service
+			.service-content
+				margin: 10% auto
+				width: 80%
+
+			.service-title
+				margin-top: 0
+
+	.section-about
+		.about-wrap
+			width: 90%
+			text-align: justify
+
+	.footer
+		.footer-items
+			margin-top: 3em

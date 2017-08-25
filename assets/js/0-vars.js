@@ -13,4 +13,7 @@ var
 	
 	sectionAbout = $('.section-about'),
 	aboutWrap = sectionAbout.find('.about-wrap'),
-	aboutSub = aboutWrap.find('.about-sub');
+	aboutSub = aboutWrap.find('.about-sub'),
+
+	footerWrap = $('.footer'),
+	outerWrap = $('.outer-wrap');
